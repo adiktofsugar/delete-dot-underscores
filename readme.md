@@ -15,5 +15,9 @@ There's also a plist file that works for my computer. You should change it to ma
 `sudo npm start` - it's a forever process, so it should just start in the foreground. When you put a sd/usb card in, it'll start watching.
 
 ### How to install as a launch daemon
+*You should change the plist file before using it!!*
+Everything's specific to my setup and I don't feel like making an install script, so change:
+    - `WorkingDirectory` to be wherever this repo is
+    - `EnvironmentVariables.PATH` to include the npm binary
 As root, you can just run the command in the "install_as_daemon" package.json script, which just copies the plist file to /Library/LaunchDaemons/.
 Then...it should start on boot, but you can also run `sudo launchctl load /Library/LaunchDaemons/local.deletedotunderscore.plist`
