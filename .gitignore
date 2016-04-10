@@ -1,0 +1,4 @@
+node_modules
+forever-logs.txt
+log.txt
+npm-debug.log

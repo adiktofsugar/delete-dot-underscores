@@ -1,0 +1,20 @@
+{
+  "name": "delete_dot_underscore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install_as_daemon": "sudo cp local.deletedotunderscore.plist /Library/LaunchDaemons/",
+    "start": "forever -l forever-logs.txt -o forever-logs.txt -e forever-logs.txt index.js",
+    "forever": "forever start index.js",
+    "foreverstop": "forever stop index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sean McCollum <anincrediblyshortname@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "forever": "^0.15.1",
+    "fs-walk": "0.0.1"
+  }
+}
